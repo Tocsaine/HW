@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>Регистрация</title>
+  <style>
+    .header {
+      background-color: #f8f9fa;
+      padding: 20px;
+      border-bottom: 1px solid black;
+    }
+    .registration {
+      background-color: #fff;
+      padding: 20px;
+      margin: 10px;
+    }
+    .user-info {
+      padding: 20px;
+    }
+    .footer {
+      background-color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    .name {
+      padding: 30px 20px;
+      background-color: #f8f9fa;
+      border-bottom: 1px solid black;
+
+    }
+    .ask {
+      padding: 30px;
+      background-color: #f8f9fa;
+      border-bottom: 1px solid black;
+
+    }
+    .avatar {
+      padding: 20px;
+      background-color: #f8f9fa;
+      border-bottom: 1px solid black;
+
+    }
+    .nickname {
+      padding: 25px 20px 0 0;
+      background-color: #f8f9fa;
+      font-weight: bolder;
+      text-align: left;
+    }
+    .refs {
+      
+      background-color: #f8f9fa;
+    }
+    .base-info{
+      background-color: #f8f9fa;
+      border-bottom: 1px solid black;
+    }
+    .highlight-red{
+      color: red;
+    }
+    .highlight-orange{
+      color: orange;
+    }
+    .highlight-green{
+      color: green;
+    }
+    .underlined{
+      color: blue;
+      border-bottom: 1px blue;
+      text-decoration: underline;
+    }
+    .warning{
+      color: red;
+    }
+    .submit {
+      margin-top: 20px;
+    }
+
+    input[type="file"]{
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2 header">
+        <h1>AskMe</h1>
+      </div>
+      <div class="col-md-6 name">
+        <input type="text" class = "form-control" placeholder="Поиск">
+      </div>
+      <div class="col-md-1 ask">
+        <button type="submit" class="btn btn-primary">Ask!</button>
+      </div>
+      <div class="col-md-1 avatar">
+        <img src="images/2.jpg" alt="Аватар" width="50">
+      </div>
+      <div class="col-md-2 base-info">
+        <div class="nickname">
+          your_nickname
+        </div>
+        <div class="refs">
+          <a href="settings.html">settings</a>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="exit.html">log out</a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-9">
+        <div class="row">
+          <div class="col-md-6 registration">
+            <h2>Settings: Tocsaine</h2>
+            <form>
+              <div class="row">
+                  <div class="col-md-4">
+                    <p>Login:</p>
+                  </div>
+                  <div class="col-md-8">
+                    <input type="text" name="login" value="navi1301">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <p>Email:</p>
+                  </div>
+                  <div class="col-md-8">
+                    <input type="text" name="login" value="navi1301@gmail.com">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <p>Nickname:</p>
+                  </div>
+                  <div class="col-md-8">
+                    <input type="text" name="login" value="Tocsaine">
+                  </div>
+                </div>
+
+              <form action="/upload-avatar" method="post" enctype="multipart/form-data">
+                <div class="row">
+                  <div class="col-md-4">
+                    <p>Upload avatar</p>
+                  </div>
+                  <div class="col-md-8">
+                    <img src="images/2.jpg" width="100">
+                    <input type="file" name="avatar" accept="image/*">
+                  </div>
+                </div>
+              </form>
+              <div class="submit">
+                <button type="submit" class="btn btn-primary">Save</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="user-info">
+          <h4>Popular Tags</h4>
+          <a href="">perl</a>
+          <a href="" ><span class = "highlight-red">python</span></a>
+          <a href="">TechnoPark</a>
+          <a href=""><span class = "highlight-red">MySQL</span></a>
+          <a href=""><span class = "highlight-green">django</span></a>
+          <a href="">Mail.ru</a>
+          <a href="">Voloshin</a>
+          <a href=""><span class = "highlight-orange">Firefox</span></a>
+          <a href="">Dota 2</a>
+
+          <h4>Best Members</h4>
+          <div class = "underlined">
+            <p><a href="">Mr.Freeman</a></p>
+          </div>
+          <div class = "underlined">
+            <p><a href="">Dr.House</a></p>
+          </div>
+          <div class = "underlined">
+            <p><a href="">Bender</a></p>
+          </div>
+          <div class = "underlined">
+            <p><a href="">Tocsaine</a></p>
+          </div>
+          <div class = "underlined">
+            <p><a href="">uepuxon</a></p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 footer">
+        &copy; 2023 Все права защищены
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>Регистрация</title>
+  <style>
+    .header {
+      background-color: #f8f9fa;
+      padding: 20px;
+      border-bottom: 1px solid black;
+    }
+    .registration {
+      background-color: #fff;
+      padding: 20px;
+    }
+    .user-info {
+      padding: 20px;
+    }
+    .footer {
+      background-color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    .pagination{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .page-link{
+      padding: 5px 10px;
+      text-decoration: none;
+      border: 1px solid #ccc;
+      margin: 0 2px;
+      color: #333;
+      background-color: #f9f9f9;
+      border-radius: 4px;
+    }
+    .ellipsis{
+      font-weight: bold;
+      margin: 0 5px;
+    }
+    .name {
+      padding: 30px 20px;
+      background-color: #f8f9fa;
+      border-bottom: 1px solid black;
+
+    }
+    .ask {
+      padding: 30px;
+      background-color: #f8f9fa;
+      border-bottom: 1px solid black;
+
+    }
+    .avatar {
+      padding: 20px;
+      background-color: #f8f9fa;
+      border-bottom: 1px solid black;
+
+    }
+    .nickname {
+      padding: 25px 20px 0 0;
+      background-color: #f8f9fa;
+      font-weight: bolder;
+      text-align: left;
+    }
+    .refs {
+      background-color: #f8f9fa;
+    }
+    .base-info{
+      background-color: #f8f9fa;
+      border-bottom: 1px solid black;
+    }
+    .highlight-red{
+      color: red;
+    }
+    .highlight-orange{
+      color: orange;
+    }
+    .highlight-green{
+      color: green;
+    }
+    .underlined{
+      color: blue;
+      border-bottom: 1px blue;
+      text-decoration: underline;
+    }
+    .counter {
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+    
+    }
+    .counter-ans1{
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+    }
+
+    .counter-ans1 button{
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .counter button {
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .negative {
+      color: red;
+    }
+
+    .positive {
+      color: green;
+    }
+
+    .question {
+      border-bottom: 1px solid black;
+      padding: 10px;
+    }
+
+    .answer-row{
+      border: 2px solid black;
+      padding: 10px;
+      margin-top: 10px;
+    }
+    .fixed-input{
+      height: 150px !important;
+      resize: vertical;
+      overflow-y: auto;
+
+    }
+    .your-answer {
+      padding: 10px 10px 10px 0;
+      margin-top: 10px;
+      border-top: 1px solid black;
+    }
+    textarea + button {
+      margin-top: 10px;
+    }
+    .hot {
+      padding: 10px;
+
+    }
+    .text-container{
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .text-container::hover{
+      -webkit-line-clamp: unset;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2 header">
+        <h1>AskMe</h1>
+      </div>
+      <div class="col-md-6 name">
+        <input type="text" class = "form-control" placeholder="Поиск">
+      </div>
+      <div class="col-md-1 ask">
+        <button type="submit" class="btn btn-primary">Ask!</button>
+      </div>
+      <div class="col-md-1 avatar">
+        <img src="images/2.jpg" alt="Аватар" width="50">
+      </div>
+      <div class="col-md-2 base-info">
+        <div class="nickname">
+          Tocsaine
+        </div>
+        <div class="refs">
+          <a href="settings.html">settings</a>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="exit.html">log out</a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-9">
+        <div class="row">
+          <div class="col-md-12 registration">
+            <div class="row">
+              <div class="col-md-4">
+                <h3>Tag: bender</h3>
+              </div>
+            </div>
+
+          <div class="row answer-row">
+            <div class="col-md-2">
+              <img src="images/vk.png" alt="Аватар" width="100">
+              <div class="counter-ans1">
+                <span id="count-ans1">0</span>
+                <button class = "positive" onclick="increment('count-ans1')">+</button>
+                <button class = "negative" onclick="decrement('count-ans1')">-</button>
+              </div>
+            </div>
+            <div class = "col-md-10">
+              <h4><a href="">How to build a moon park?</a></h4>
+              <div class="text-container">
+                Guys, i have trouble with a moon park. Can't find th black-jack and bender, so i definnetly need some help. First of all i would like to thank you for the invitation to participate in such a... Russia is the huge territory which in many respects needs to be render habitable. 0239890283482340824823048203842
+              </div>
+              <div class="row">
+                <div class="col-md-2">
+                  <a href="">answer (3)</a>
+                </div>
+                <div class="col-md-10">
+                  Tags: <a href="">black-jack</a>&nbsp;<a href="">bender</a>
+                </div>
+              </div>
+            </div>          
+          </div>
+          <div class="row answer-row">
+            <div class="col-md-2">
+              <img src="images/vk.png" alt="Аватар" width="100">
+              <div class="counter">
+                <span id="count-ans2">0</span>
+                <button class = "positive" onclick="increment('count-ans2')">+</button>
+                <button class = "negative" onclick="decrement('count-ans2')">-</button>
+              </div>
+            </div>
+            <div class = "col-md-10">
+              <h4><a href="">How to build a moon park?</a></h4>
+              <div class="text-container">
+                Guys, i have trouble with a moon park. Can't find th black-jack and bender, so i definnetly need some help. 
+              </div>
+              <div class="row">
+                <div class="col-md-2">
+                  <a href="">answer (3)</a>
+                </div>
+                <div class="col-md-10">
+                  Tags: <a href="">black-jack</a>&nbsp;<a href="">bender</a>
+                </div>
+              </div>
+            </div>          
+          </div>
+          <div class="row answer-row">
+            <div class="col-md-2">
+              <img src="images/vk.png" alt="Аватар" width="100">
+              <div class="counter">
+                <span id="count-ans3">0</span>
+                <button class = "positive" onclick="increment('count-ans3')">+</button>
+                <button class = "negative" onclick="decrement('count-ans3')">-</button>
+              </div>
+            </div>
+            <div class = "col-md-10">
+              <h4><a href="">How to build a moon park?</a></h4>
+              <div class="text-container">
+                Guys, i have trouble with a moon park. Can't find th black-jack and bender, so i definnetly need some help. 
+              </div>
+              <div class="row">
+                <div class="col-md-2">
+                  <a href="">answer (3)</a>
+                </div>
+                <div class="col-md-10">
+                  Tags: <a href="">black-jack</a>&nbsp;<a href="">bender</a>
+                </div>
+              </div>
+            </div>          
+          </div>
+            <script>
+
+                function updateCount(id, count){
+
+                  const countElement = document.getElementById(id);
+                  if (count > 0){
+                    countElement.textContent = '+' + count;
+                  }
+                  if (count == 0){
+                    countElement.textContent = 0;
+                  }
+                  if (count < 0){
+                    countElement.textContent = count;
+                  }
+                }
+
+                function increment(id) {
+                  let count = parseInt(document.getElementById(id).textContent);
+                  count++;
+                  updateCount(id, count);
+                }
+
+                function decrement(id) {
+                  let count = parseInt(document.getElementById(id).textContent);
+                  count--;
+                  updateCount(id, count);
+                }
+
+                updateCount();
+              </script>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="user-info">
+          <h4>Popular Tags</h4>
+          <a href="">perl</a>
+          <a href="" ><span class = "highlight-red">python</span></a>
+          <a href="">TechnoPark</a>
+          <a href=""><span class = "highlight-red">MySQL</span></a>
+          <a href=""><span class = "highlight-green">django</span></a>
+          <a href="">Mail.ru</a>
+          <a href="">Voloshin</a>
+          <a href=""><span class = "highlight-orange">Firefox</span></a>
+          <a href="">Dota 2</a>
+
+          <h4>Best Members</h4>
+          <div class = "underlined">
+            <p><a href="">Mr.Freeman</a></p>
+          </div>
+          <div class = "underlined">
+            <p><a href="">Dr.House</a></p>
+          </div>
+          <div class = "underlined">
+            <p><a href="">Bender</a></p>
+          </div>
+          <div class = "underlined">
+            <p><a href="">Tocsaine</a></p>
+          </div>
+          <div class = "underlined">
+            <p><a href="">uepuxon</a></p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="pagination">
+        <a href="#" class="page-link">1</a>
+        <a href="#" class="page-link">2</a>
+        <a href="#" class="page-link">3</a>
+        <span class="ellipsis">...</span>
+        <a href="#" class="page-link">53</a>
+      </div>
+      <div class="col-md-12 footer">
+        &copy; 2023 Все права защищены
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+\
